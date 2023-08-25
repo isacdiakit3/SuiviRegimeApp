@@ -1,0 +1,40 @@
+/* Commented out .mat-dialog-content */
+/* Commented out .formplat form */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+  max-width: 400px; /* Largeur réduite */
+  margin: 0 auto;
+}
+
+.formplat,
+.image {
+  flex: 1; /* Utiliser tout l'espace disponible */
+  padding: 15px; /* Ajustement du padding */
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 10px; /* Espacement entre les éléments */
+}
+
+.image {
+  text-align: center; /* Centrer l'image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-size: 20px;
+  margin-bottom: 10px; /* Espacement entre les éléments */
+}
