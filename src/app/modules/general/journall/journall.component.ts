@@ -1,18 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PageplatComponent } from 'src/app/pageplat/pageplat.component';
-import { AccueilComponent } from '../accueil/accueil.component';
+import { FormService } from 'src/app/form.service';
+import { FormGroup } from '@angular/forms';
+import { FormBuilder,  FormControl } from '@angular/forms';
+
 @Component({
   selector: 'app-journall',
   templateUrl: './journall.component.html',
   styleUrls: ['./journall.component.scss']
 })
-export class JournallComponent  {
+export class JournallComponent implements OnInit {
+  dataEntries: { image: string, name: string, des: string, calorie: number}[] = [];
+  @Input() savedForms: any[] = [];
+
+  constructor(private dialog: MatDialog, private formService: FormService) {}
+
+  deleteEntry(index: number) {
+    this.dataEntries.splice(index, 1);
+  }
+
+  ngOnInit(): void {
+    this.savedForms = this.formService.getSavedForms();
+    console.log(this.savedForms)
+  }
   
 
-    constructor(private dialog : MatDialog){}
-
-    openDialog(){
-      this.dialog.open(PageplatComponent);
-    }
+  openDialog() {
+    this.dialog.open(PageplatComponent);
+  }
 }

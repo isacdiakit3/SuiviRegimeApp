@@ -74,15 +74,23 @@ body {
   flex-wrap: wrap; /* Pour que les cartes passent à la ligne si l'espace est insuffisant */
   justify-content: center;
   text-align: center; /* Centrer les cartes horizontalement */
+  
 }
 
 .card {
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 10px;
   width: 200px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #95bd87;
+  transform: scale(1.05);
 }
 
 .dish-image {
@@ -92,6 +100,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
+  border-radius: 50%;
 }
 
 .dish-name {
@@ -110,15 +119,40 @@ body {
   font-size: 15px;
   color: #444;
 }
-.pl {
-  width: 150px;
-  height: 30px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: rgba(95, 202, 95, 0.66);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 15px;
+
+.btn{
+  display: flex;
+  justify-content: space-between; /* Espacement égal entre les boutons */
+  margin-top: 20px; 
 }
+.ple{
+  background-color: #47AC23;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.pl,
+.md {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pl {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.md {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
 

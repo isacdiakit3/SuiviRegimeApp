@@ -7,10 +7,12 @@
     </div>
   <nav class="menu">
     <ul>
-        <li><a href="#">Calorie</a></li>
-        <li><a href="#">Objectif</a></li>
-        <li><a href="#">Planifaction</a></li>
-        <li><a href="#">Mes plats</a></li>
+      <li><a routerLink="/accueil">Accueil</a></li>
+      <li><a routerLink="/journall"style= "color: #12b852;">Mes plats</a></li>
+      <li><a routerLink="/Planifaction">Planifaction</a></li>
+        <li><a routerLink="/">Calorie</a></li>
+        <li><a routerLink="/">Objectif</a></li>
+
     </ul>
   </nav>
   </div>
@@ -38,26 +40,58 @@
   <h2 class="dish-name" style="font-size: 15px;">
     Nouveau plat</h2>
     <br>
-    <button (click)="openDialog()">Ajouter plat</button>
+    <button (click)="openDialog()" class="ple">Ajouter plat</button>
   <!-- <a routerLink="/pageplat"> <button class="pl">ajouter un plat</button></a> -->
 </div>
 
-    <div class="card">
+   <div class="card">
       <img src="../assets/sha.jpg" alt="Spaghetti Bolognese" class="dish-image">
       <h2 class="dish-name">Spaghetti Bolognese</h2>
       <p class="calories">Calories : 550</p>
       <p class="description">Des spaghettis servis avec une
          sauce bolognaise 
         savoureuse et du parmesan râpé.</p>
+        <div class="btn">
+        <button type="reset" class="pl">Supprimer</button>
+        <button class="md" >Modifier</button>
+      </div>
     </div>
 
-<!-- Card 1 -->
+  <!-- Card 1 -->
     <div class="card">
-      <img src="caesar-salad.jpg" alt="Salade César" class="dish-image">
+      <img src="" alt="Salade César" class="dish-image">
       <h2 class="dish-name">Salade César</h2>
       <p class="calories">Calories : 320</p>
       <p class="description">Une salade rafraîchissante avec de la laitue, du poulet grillé, des croûtons et une vinaigrette césar.</p>
+     <div class="btn">
+      <button type="reset" class="pl">Supprimer</button>
+      <button class="md" >Modifier</button>
     </div>
+    </div> 
+
+
+    <!-- recuperation -->
+    <div class="cards-container">
+      <div class="card" *ngFor="let form of savedForms">
+        <img [src]="form.image"class="dish-image">
+        <h2 class="dish-name"> Nom :{{ form.nom }}</h2>
+        <p class="calories">Calories : {{ form.calorie }}</p>
+        <p class="description">Description : {{ form.des }}</p>
+        <div class="btn">
+        <button type="reset" class="pl">Supprimer</button>
+        <button class="md" >Modifier</button>
+      </div>
+      </div>
+    </div>
+
+    <!-- <div *ngFor="let data of dataEntries; let i = index">
+      {{ <data class="dish-image"></data>}}  - {{ <data class="dish-name"></data> }} - 
+      {{ <data class="description"></data> }} -
+      {{ <data class="calorie"></data> }}
+      <button (click)="editEntry(i)" class="pl">Modifier</button>
+      <button (click)="deleteEntry(i)" class="md">Supprimer</button>
+    </div> -->
+    
   </div>
 
 
