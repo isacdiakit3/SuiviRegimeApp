@@ -9,13 +9,16 @@ import { MatListModule } from '@angular/material/list';
 import { CommonModule } from '@angular/common';
 import { JournallComponent } from './modules/general/journall/journall.component';
 import { PlanificationComponent } from './planification/planification.component';
-import { PageplatComponent } from './pageplat/pageplat.component';
+import { PagePlatComponent } from './pageplat/pageplat.component';
+import { TodolistComponent } from './todolist/todolist.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PageplatComponent,
+    PagePlatComponent,
     JournallComponent,
-    PlanificationComponent
+    PlanificationComponent,
+    TodolistComponent
    
   ],
   exports: [

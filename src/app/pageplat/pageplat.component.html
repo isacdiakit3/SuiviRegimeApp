@@ -1,20 +1,29 @@
-<div class="container">
-  <form [formGroup]="platForm" (ngSubmit)="onSubmit()">
-    <div>
-      <input type="file" formControlName="image">
+<h1 mat-dialog-title id="titre">Nouveau plat</h1>
+<div mat-dialog-content class="mat-typography">
+  <div class="container">
+    <div class="formplat">
+      <form [formGroup]="platForm" (ngSubmit)="onSubmit()">
+        <div>
+          <input type="file" name="image" id="image">
+        </div>
+        <div>
+          <label for="nom">Nom du plat:</label>
+          <input type="text" id="nom" formControlName="nom">
+        </div>
+        <div>
+          <label for="des">Description:</label>
+          <input type="text" id="des" formControlName="des">
+        </div>
+        <div>
+          <label for="calorie">Calorie:</label>
+          <input type="number" id="calorie" formControlName="calorie">
+        </div>
+        <button type="submit" class="pl">Enregistrer</button>
+        <button mat-dialog-close class="close-button">Fermer</button>
+      </form>
+      
+    <div class="image">
+      <img src="../assets/form.png" alt="" name="image" id="image">
     </div>
-    <div>
-      <label for="nom">Nom du plat:</label>
-      <input type="text" id="nom" formControlName="nom">
-    </div>
-    <div>
-      <label for="des">Description:</label>
-      <input type="text" id="des" formControlName="des">
-    </div>
-    <div>
-      <label for="calorie">Calorie:</label>
-      <input type="number" id="calorie" formControlName="calorie">
-    </div>
-    <button type="submit" class="pl">Enregistrer</button>
-  </form>
+  </div>
 </div>

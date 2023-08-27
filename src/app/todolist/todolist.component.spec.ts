@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PagePlatComponent } from './pageplat.component';
+import { TodolistComponent } from './todolist.component';
 
-describe('PageplatComponent', () => {
-  let component: PagePlatComponent;
-  let fixture: ComponentFixture<PagePlatComponent>;
+describe('TodolistComponent', () => {
+  let component: TodolistComponent;
+  let fixture: ComponentFixture<TodolistComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PagePlatComponent]
+      declarations: [TodolistComponent]
     });
-    fixture = TestBed.createComponent(PagePlatComponent);
+    fixture = TestBed.createComponent(TodolistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -18,5 +18,4 @@ describe('PageplatComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
 });

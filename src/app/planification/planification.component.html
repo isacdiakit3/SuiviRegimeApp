@@ -36,8 +36,11 @@
 </div>
 
 <!-- les jours -->
-
-<div class="jr">
-    
-    
+<div class="ctn">
+    <div *ngFor="let day of daysOfWeek" class="day-item">
+        <a class="jr" [routerLink]="['/todolist', day]">
+            <img src="../assets/calendar.png" alt="Calendrier" class="calendar-icon" />
+            <span>{{ day }}</span>
+        </a>
+    </div>
 </div>

@@ -7,9 +7,13 @@
     align-items: center; /* Aligne verticalement les éléments */
     justify-content: space-between; /* Répartit l'espace horizontal entre les éléments */
   }
-  .tete{
+
    
-background: rgba(95, 202, 95, 0.50);
+.tete{
+        width: 100%;
+        height: 300px;
+        background-color: #5FCA5F80;
+
   }
   .menu ul {
     list-style: none;
@@ -30,20 +34,22 @@ background: rgba(95, 202, 95, 0.50);
     }
   }
 
-  .text {
-    color: #000;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.125px;
-    text-align: center;
-    // padding: 20px;
-    margin-bottom: 5PX;
-  }
+//   .text {
+//     color: #000;
+//     font-family: 'Poppins', sans-serif;
+//     font-size: 20px;
+//     font-weight: 500;
+//     letter-spacing: 0.125px;
+//     text-align: center;
+//     // padding: 20px;
+//     margin-bottom: 5PX;
+//   }
   
   .image {
     text-align: center;
     margin-top: 5%;
+   
+    
   }
   
   .image img {
@@ -55,6 +61,7 @@ background: rgba(95, 202, 95, 0.50);
     flex-direction: row; /* Ajustement */
     max-width: 1200px;
     margin: 0 auto;
+    
   }
   
   .text {
@@ -83,7 +90,71 @@ background: rgba(95, 202, 95, 0.50);
     font-size: 40px;
     color: #b0e29e;
   }
+// .jr{
+// width: 100px;
+// height: 20px;
+// flex-shrink: 0;
+// border : #e8e6e693 1px solid;
+// margin-top: 50%;
+// color: #01d452;
+// font-size: 30px;
+// list-style: none;
+// text-decoration: none;
+// &:hover {
+//     background-color: #bfc6c1; /* Couleur au survol */
+    
+//   }
+// }
+// .ctn{
+// display: flex;
+// width: 1000px;
+// height: 550px;
+// align-items: center;
+// align-content: center;
+// gap: 60px;
+// flex-shrink: 0;
+// flex-wrap: wrap;
+// top: 50%;
 
+
+// }
   
-  
+.ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    height: 550px;
+    flex-wrap: wrap;
+}
+
+.day-item {
+    display: flex;
+    align-items: center;
+}
+
+.jr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    border: 1px solid #e8e6e693;
+    color: #01d452;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.jr:hover {
+    background-color: #a6eeba;
+}
+
+.calendar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
   

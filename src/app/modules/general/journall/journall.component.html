@@ -9,7 +9,7 @@
     <ul>
       <li><a routerLink="/accueil">Accueil</a></li>
       <li><a routerLink="/journall"style= "color: #12b852;">Mes plats</a></li>
-      <li><a routerLink="/Planifaction">Planifaction</a></li>
+      <li><a routerLink="/planifaction">Planifaction</a></li>
         <li><a routerLink="/">Calorie</a></li>
         <li><a routerLink="/">Objectif</a></li>
 
@@ -73,7 +73,7 @@
     <!-- recuperation -->
     <div class="cards-container">
       <div class="card" *ngFor="let form of savedForms">
-        <img [src]="form.image"class="dish-image">
+        <img [src]="form.image" class="dish-image">
         <h2 class="dish-name"> Nom :{{ form.nom }}</h2>
         <p class="calories">Calories : {{ form.calorie }}</p>
         <p class="description">Description : {{ form.des }}</p>
@@ -83,14 +83,9 @@
       </div>
       </div>
     </div>
+    
+    
 
-    <!-- <div *ngFor="let data of dataEntries; let i = index">
-      {{ <data class="dish-image"></data>}}  - {{ <data class="dish-name"></data> }} - 
-      {{ <data class="description"></data> }} -
-      {{ <data class="calorie"></data> }}
-      <button (click)="editEntry(i)" class="pl">Modifier</button>
-      <button (click)="deleteEntry(i)" class="md">Supprimer</button>
-    </div> -->
     
   </div>
 
