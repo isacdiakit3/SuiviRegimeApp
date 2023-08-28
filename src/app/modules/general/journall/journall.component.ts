@@ -21,8 +21,6 @@ export class JournallComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.savedForms = this.formService.getSavedForms();
-    // console.log(this.savedForms)
     const savedFormsFromLocalStorage = localStorage.getItem('savedForms');
     if (savedFormsFromLocalStorage) {
       this.savedForms = JSON.parse(savedFormsFromLocalStorage);

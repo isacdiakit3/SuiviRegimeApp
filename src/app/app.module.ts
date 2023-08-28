@@ -11,6 +11,7 @@ import { JournallComponent } from './modules/general/journall/journall.component
 import { PlanificationComponent } from './planification/planification.component';
 import { PagePlatComponent } from './pageplat/pageplat.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import { CalorieComponent } from './calorie/calorie.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TodolistComponent } from './todolist/todolist.component';
     PagePlatComponent,
     JournallComponent,
     PlanificationComponent,
-    TodolistComponent
+    TodolistComponent,
+    CalorieComponent
    
   ],
   exports: [

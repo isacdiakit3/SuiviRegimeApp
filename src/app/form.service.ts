@@ -1,5 +1,6 @@
 import { FormGroup } from '@angular/forms';
 import { Injectable, EventEmitter } from '@angular/core';
+import { TodolistComponent } from './todolist/todolist.component';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class FormService {
   }
 
   //Une methode pour enregistrer les todolist
-  addTodolist(tasks: { text: string; completed: boolean; quantity: number }[]) {
+  addTodolist(tasks: { text: string; quantity: number;completed: boolean;  }[]) {
     
     const todolists = this. getTodolists();
     todolists.push(tasks);
@@ -26,13 +27,13 @@ export class FormService {
   getTodolists() {
     return this.getStoredTodolists();
   }
-  //
+  //Methode pour récuperer les données dans le stockage local
   private getStoredTodolists(): { text: string; completed: boolean; quantity: number }[][] {
     const storedTodolists = localStorage.getItem(this.storageKey);
     return storedTodolists ? JSON.parse(storedTodolists) : [];
   }
-  //
-  private storeTodolists(todolists: { text: string; completed: boolean; quantity: number }[][]) {
+  //cette méthode stok les données dans le stockage local
+  public storeTodolists(todolists: { text: string; completed: boolean; quantity: number }[][]) {
     localStorage.setItem(this.storageKey, JSON.stringify(todolists));
   }
 

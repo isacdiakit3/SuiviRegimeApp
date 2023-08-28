@@ -5,13 +5,15 @@ import { JournallComponent } from './modules/general/journall/journall.component
 import { PagePlatComponent } from './pageplat/pageplat.component'; 
 import { PlanificationComponent } from './planification/planification.component';
 import { TodolistComponent } from './todolist/todolist.component';
+import { CalorieComponent } from './calorie/calorie.component';
 const routes: Routes = [
   { path: '', component: AccueilComponent, },
   { path: 'accueil', component: AccueilComponent, },
   { path: 'journall', component: JournallComponent, },
   { path: 'pageplat', component: PagePlatComponent, },
   { path: 'planification', component: PlanificationComponent, },
-  { path: 'todolist/:planification', component: TodolistComponent, }
+  { path: 'todolist/:planification', component: TodolistComponent, },
+  { path: 'calorie', component: CalorieComponent, },
   
   // ... ajoutez d'autres routes ici si nécessaire
 ];

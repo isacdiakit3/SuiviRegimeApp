@@ -18,7 +18,7 @@ addTask() {
   if (this.newTask.trim() !== '') {
     this.tasks.push({ text: this.newTask, quantity: this.newQuantity, completed: false });
     this.newTask = '';
-    this.formService.addTodolist(this.tasks);
+    this.formService.addTodolist( this.tasks);
   }
        }
 // le bouton pour supprimer
@@ -36,11 +36,13 @@ toggleTask(index: number) {
   
   
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.selectedDay = params['selectedDay']; 
     
-      // this.todolist = this.formService.getTodolists(this.selectedDay);
-     
-    });
+  const storedTodolists = localStorage.getItem('todolists');
+  if (storedTodolists) {
+    this.tasks = JSON.parse(storedTodolists);
+    console.log(this.tasks);
+  } 
+    };
+  
+
   }
-}
