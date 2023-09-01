@@ -1,1 +1,17 @@
+
+<div class="accueil">
+    <img src="../../assets/mes repas acceuil.png" alt="">
+    <p>Transforme chaque journée en une délicieuse composition de saveurs équilibrées et de bien-être nourrissant.</p>
+  
+
+</div>
+<div class="plats">
+   
+    <div class="Ajouterplat">
+        <div class="ajoout">
+            <img src="../../assets/mes plats.png" alt="">
+        <button (click)="onAddPlats()">Ajouter</button>
+        </div>
+    </div> 
 <app-mes-plats *ngFor="let monPlat of mesPlats" [mesPlats]="monPlat"></app-mes-plats>
+</div>

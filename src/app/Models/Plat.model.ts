@@ -3,5 +3,5 @@ export class Plat{
     nomDuPlat!: string
     description?:string
     nombreCalorie!:number
-    photo!:String
+    photo!:String 
 }

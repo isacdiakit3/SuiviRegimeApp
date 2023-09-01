@@ -1,12 +1,13 @@
 .cartePlat{
-    width: 190px;
+    width: 30%;
+    height: auto;
     box-sizing: border-box;
-    height:     250px;
-    margin: 10px 10px;
+    margin: 20px auto;
     padding: 10px 20px;
     box-shadow: lightgrey 4px 4px 20px;
     border-radius: 15px;
     background-color: rgb(205, 240, 208);
+    align-items: center;
     img{
         width: 100%;
         border-radius: 15px;
@@ -21,11 +22,12 @@
     p{
         font-weight: 500;
         font-size: 16px;
-        
     }
     button{
         width: 35%;
-        background-color: rgb(95, 202, 95 ,50%);
+        height: 55px;
+        align-items: center;
+        text-align: center;
         box-sizing: border-box;
         box-shadow: rgb(158, 158, 158) 3px 3px 30px;
         border-radius: 25px;
@@ -36,17 +38,34 @@
             transform: translate(1px, 1px);
             box-shadow: lightgray 0 0 5px;
           }
-          &:hover{
-            background-color: #2a942a;
-          }
         
     }
     .supprimer{
         background-color: rgb(209, 86, 86);
-        margin: 20px 50px 20px 5px;;
+        margin-right: 50px;
+        &:hover{
+            background-color: rgb(214, 24, 24);
+        }
     }
     .modifier{
         background-color: rgb(95, 202, 95 ,50%);
+        &:hover{
+            background-color: #2a942a;
+        }
+
+    }
+    .retour{
+        width: 25%;
+        height: 30px;
+        &:hover{
+            background-color: rgb(192, 187, 187);
+        }
     }
 
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

@@ -1,0 +1,12 @@
+<div class="cartePlat">
+    
+    <button routerLink="/mesPlats" class="retour">Retour</button>
+    <img [src]="mesPlats.photo" [alt]="mesPlats.nomDuPlat">
+    <h1>{{mesPlats.nomDuPlat |uppercase}}</h1>
+    <p>{{mesPlats.description}}</p>
+    <p>{{mesPlats.nombreCalorie}} KiloCalories</p>
+    <div class="btn">
+    <button class="supprimer" (click)="onSupp()">Supprimer</button>
+    <button class="modifier" (click)="onEdit()">Modifier</button>
+    </div>
+</div>

@@ -1,10 +1,9 @@
     
 
     <div class="cartePlat">
-        <img [src]="mesPlats.photo" [alt]="mesPlats.nomDuPlat">
+        <div >
         <h1>{{mesPlats.nomDuPlat |uppercase}}</h1>
-        <p>{{mesPlats.description}}</p>
         <p>{{mesPlats.nombreCalorie}} KiloCalories</p>
-        <button class="supprimer"><span>Supprimer</span></button>
-        <button class="modifier"><span>Modifier</span></button>
+        <button (click)="onVoirMesplats()">Voir</button>
+        </div>
     </div>

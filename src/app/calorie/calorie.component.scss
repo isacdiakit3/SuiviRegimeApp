@@ -11,8 +11,8 @@
         align-items: center;
         margin-left: 40px;
         margin-top: 16%;
-        line-height: 40px;
         font-size: 30px;
+        line-height: 40px;
     }
     img{
         width: 40%;
@@ -24,16 +24,28 @@
         margin-left: 40px;
 }
 }
-.ajoout{
+h1{
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+.calorie{
+    align-items: center;
+    justify-content: center;
+}
+form{
     display: flex;
     flex-direction: column;
-    padding: 0%;
-    width: 100%;
-    margin: 0%;
-    align-items: center;
-    padding: 10px;
-    img{
-        width: 100%
+    margin: 10px auto;
+    padding: 20px;
+    padding-bottom: 40px;
+    
+    input,select{
+        margin: 10px;
+        height: 25px;
+        padding: 02px;
+        border-radius: 10px;
+        border: O,791;
     }
     button{
         width: 50%;
@@ -43,6 +55,7 @@
         background-color: #5FCA5F;
         border-radius: 10px;
         margin-top: 5px;
+        margin-left: 25%;
         box-shadow: rgb(158, 158, 158) 3px 3px 30px;
         &:hover{
             background-color: #2a942a;
@@ -51,19 +64,23 @@
             transform: translate(1px, 1px);
             box-shadow: lightgray 0 0 5px;
           }
-    }
+        }
 }
-.Ajouterplat{
+.content{
+    text-align: center;
+    width: 50%;
+    padding: 20px 20px ;
+    padding-bottom: 3Opx;
+    height: auto;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 10px 20px;
+    box-shadow: lightgrey 4px 4px 20px;
+    border-radius: 15px;
+    background-color: rgb(205, 240, 208);
+    align-items: center;
     
-    height: 200px;
-    width: auto;
-    margin: 2px;
-    display: flex;
-    flex-direction: column;
-
 }
-
-.plats{
-    display: flex;
-    flex-wrap: wrap;
+.modal.show{
+    display: block;
 }

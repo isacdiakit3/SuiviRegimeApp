@@ -1,0 +1,23 @@
+<div class="formulaire">
+    <button routerLink="/mesPlats" class="retour">fermer</button>
+    <form [formGroup]="formRepas">
+        <label for="nomDuPlat">Nom</label>
+        <input type="text" id="nomDuPlat" formControlName="nomDuPlat" placeholder="nom du plat">
+        <label for="description">Description</label>
+        <input type="text" id="description" formControlName="description" placeholder="description">
+        <label for="nombreCalorie">Nombre de Calorie</label>
+        <input type="text" id="nombreCalorie" formControlName="nombreCalorie" placeholder="0">
+        <label for="photo">Url de l'image</label>
+        <input type="text" id="photo" formControlName="photo" placeholder="https://">
+        <button type="submit" [disabled]="formRepas.invalid" (click)="onSubmitForm()">Ajouter</button>
+    </form>
+    <img src="../../assets/accueil-repas.png" alt="">
+</div>
+<div class="carte-plat" *ngIf="repasPreview$ |async as mesPlats">
+    
+        <img [src]="mesPlats.photo" [alt]="mesPlats.nomDuPlat">
+        <h1>{{mesPlats.nomDuPlat |uppercase}}</h1>
+        <p>{{mesPlats.description}}</p>
+        <p>{{mesPlats.nombreCalorie}} KiloCalories</p>
+
+</div>

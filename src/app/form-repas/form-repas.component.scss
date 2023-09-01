@@ -1,0 +1,97 @@
+.cartePlat, .carte-plat{
+    width: 30%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 10px 20px;
+    box-shadow: lightgrey 4px 4px 20px;
+    border-radius: 15px;
+    background-color: rgb(205, 240, 208);
+    align-items: center;
+    img{
+        width: 100%;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+    h3{
+        margin-bottom: 0%;
+    }
+    h1{
+        margin-top: 5px;
+    }
+    p{
+        font-weight: 500;
+        font-size: 16px;
+    }
+   
+    
+   
+    
+
+}
+.formulaire{
+    margin-left: 25%;
+    display: flex;
+    width: 60%;
+    border-radius: 15px;
+    border: 1px solid;
+}
+    form{
+        align-items: center;
+        margin-left: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    label{
+        font-size: small;
+        padding-left: 10px;
+    }
+    input{
+        width: 200px;
+        border: 0,791px;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 2px;
+        padding-left: 15px;
+        height: 25px;
+        color: rgb(216, 212, 212);
+    }
+    button{
+        width: 50%;
+        height: 55px;
+        align-items: center;
+        text-align: center;
+        background-color: #5FCA5F;
+        border-radius: 10px;
+        margin-top: 5px;
+        box-shadow: rgb(158, 158, 158) 3px 3px 30px;
+        &:hover{
+            background-color: #2a942a;
+        }
+        &:active {
+            transform: translate(1px, 1px);
+            box-shadow: lightgray 0 0 5px;
+          }
+    }
+    
+}
+img{
+    width: 400px;
+    margin-left: 20px;
+    
+}
+.retour{
+    font-weight: 500;
+    color: red;
+    border: none;
+    background: transparent;
+    border-radius:  5px;
+    width: 50px;
+    height: 20px;
+    top: -100px;
+    left: -200px
+    
+    
+
+}
