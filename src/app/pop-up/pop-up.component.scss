@@ -1,5 +1,20 @@
 .pop-up{
     color: #1b1919;
     background-color: #fff;
-    height: 150px
+    height: 250px
+}
+.content{
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    p{
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
+h1{
+    color: green;
 }

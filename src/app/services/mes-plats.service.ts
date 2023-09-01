@@ -55,90 +55,39 @@ export class mesPlatsService {
         this.mesPlats[repas] = plat
     }
 
-
-
-    calculeDeCalorie(user: any) {
-        if(user.sport == "1")
-            return this.onCalculBRM(user);
-        else{
-            console.log(user)
-            return 1;
+    calculeDeCalorie(user: any ) {
+        if(user.sport == "1"){
+            
+            return this.onCalculBRM(user)*1.2;
+        }
+        else if (user.sport == "2"){
+            return this.onCalculBRM(user)*1.375;
+        }else if (user.sport == "3"){
+            return this.onCalculBRM(user)*1.55;
+        }else if (user.sport == "4"){
+            return this.onCalculBRM(user)*1.725;
+        }else if (user.sport == "5"){
+            return this.onCalculBRM(user)*1.9;
+        }else{
+            return this.onCalculBRM(user)*0;
         }
          
         
     }
 
     onCalculBRM(user: any): number {
+            console.log(user);
+            console.log(13.397 * user.poids)
 
-        if (user.genre === 'Homme' && user.sport==='1') {
+        if (user.genre === 'Homme') {
             let BRMH = 88.362 + (13.397 * user.poids) + (4.799 * user.taille) - (5.677 * user.age)
-            const resultat = (BRMH*1.2)
-            return (resultat)
-        } else if(user.genre === 'Homme' && user.sport==='2'){
-            const BRMH = 447.593 + (9.247 * user.poids) + (3.098 * user.taille) - (4.330 * user.age)
-            const resultat = (BRMH*1.375)
-            return (resultat)
-        }else if (user.genre === 'Homme' && user.sport==='3'){
-            let BRMH = 88.362 + (13.397 * user.poids) + (4.799 * user.taille) - (5.677 * user.age)
-            const resultat = (BRMH*1.55)
-            return (resultat)
-        }else if (user.genre === 'Homme' && user.sport==='4'){
-            let BRMH = 88.362 + (13.397 * user.poids) + (4.799 * user.taille) - (5.677 * user.age)
-            const resultat = (BRMH*1.725)
-            return (resultat)
+            return (BRMH)
+        } else {
+            const BRMF = 447.593 + (9.247 * user.poids) + (3.098 * user.taille) - (4.330 * user.age)
+            return (BRMF)
         }
-        else if (user.genre === 'Homme' && user.sport==='5'){
-            let BRMH = 88.362 + (13.397 * user.poids) + (4.799 * user.taille) - (5.677 * user.age)
-            const resultat = (BRMH*1.9)
-            return (resultat)
-        }else{
-            return 2
-        }
-
-
     }
 
-    ///////////////////////FORMULE
-
-    // totalCalorie: number = 0;
-
-    // calculercalorie(): void {
-    //   let bmr: number;
-  
-    //   if (this.genre === 'Homme') {
-    //     bmr = 88.362 + (13.397 * +this.poids) + (4.799 * this.taille) - (5.677 * this.age);
-    //   } else {
-    //     bmr = 447.593 + (9.247 * this.poids) + (3.098 * this.taille) - (4.330 * this.age);
-    //   }
-  
-    //   let calculeDeCalorie!: number;
-  
-    //   switch (this.sport) {
-    //     case '1':
-    //       calculeDeCalorie = 1.2;
-    //       break;
-    //     case '2':
-    //       calculeDeCalorie = 1.375;
-    //       break;
-    //     case '3':
-    //       calculeDeCalorie = 1.55;
-    //       break;
-    //     case '4':
-    //       calculeDeCalorie = 1.725;
-    //       break;
-    //     case '5':
-    //       calculeDeCalorie = 1.9;
-    //       break;
-    //     default:
-    //       break;
-    //   }
-  
-    //   this.totalCalorie = bmr * calculeDeCalorie;
-  
-    //   console.log(this.totalCalorie)
-    // }
-
-    
     onSupprimerPlat(id: number) {
         const repas = this.mesPlats.findIndex(p => p.id === id)
         this.mesPlats.splice(repas, 1)

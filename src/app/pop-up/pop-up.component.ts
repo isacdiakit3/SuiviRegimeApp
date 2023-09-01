@@ -16,7 +16,7 @@ export class PopUpComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.resultat =this.service.onCalculBRM(this.data.userForm);
+    this.resultat =this.service.calculeDeCalorie(this.data.user);
 
   }
 
