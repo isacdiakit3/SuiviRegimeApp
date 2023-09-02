@@ -20,7 +20,7 @@ const routes: Routes = [
     path:"mesPlats/:id",component:MesSinglePlatComponent
   },
   {
-    path:"Planification",component:PagePlanificationComponent
+    path:"page-planification",component:PagePlanificationComponent
   },
   {
     path:"calorie",component:CalorieComponent

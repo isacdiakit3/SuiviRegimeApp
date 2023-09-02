@@ -12,12 +12,14 @@ import { mesPlatsService } from '../services/mes-plats.service';
 export class CalorieComponent implements OnInit {
 
 
-  constructor( private dialogRef : MatDialog , private service:mesPlatsService){}
+  constructor( private dialogRef : MatDialog , private service:mesPlatsService){
+    
+  }
 
 
   poids:number = 0
-  taille:number =0
-  age:number= 0
+  taille:number = 0
+  age:number = 0
   genre!:string
   sport!:number
 
