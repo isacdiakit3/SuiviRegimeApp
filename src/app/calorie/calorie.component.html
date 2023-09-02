@@ -9,18 +9,18 @@
     <form #calorieform = "ngForm" (ngSubmit)="onSubmit(calorieform)">
 
         <label for="poids" >Entrez votre poids</label>
-        <input type="number" name="poids" id="poids" placeholder="poids en kg" [(ngModel)]="poids">
+        <input type="number" name="poids" id="poids" placeholder="poids en kg" [(ngModel)]="poids" required>
         <label for="taille" >Entrez votre taille</label>
-        <input type="number" name="taille" id="taille" placeholder="taille en cm" [(ngModel)]="taille">
+        <input type="number" name="taille" id="taille" placeholder="taille en cm" [(ngModel)]="taille" required>
         <label for="age" >Entrez votre age</label>
-        <input type="number" name="age" id="age" placeholder="age en année" [(ngModel)]="age">
+        <input type="number" name="age" id="age" placeholder="age en année" [(ngModel)]="age" required>
         <label for="genre">Choisissez votre genre</label>
-        <select id="genre" [(ngModel)]="genre" name="genre">
+        <select id="genre" [(ngModel)]="genre" name="genre" required>
             <option value="Homme">Homme</option>
             <option value="Femme">Femme</option>
         </select>
         <label for="sport">Choisissez votre intervalle de sport</label>
-        <select id="sport" [(ngModel)]="sport" name="sport">
+        <select id="sport" [(ngModel)]="sport" name="sport" required>
             <option value="1">Sédentaire (peu ou pas d'exercice) </option>
             <option value="2">Légèrement actif (exercice léger/sport 1-3 jours/semaine) </option>
             <option value="3">Modérément actif (exercice modéré/sport 3-5 jours/semaine)</option>
@@ -28,7 +28,7 @@
             <option value="5">Extrêmement actif (exercice très intense/sport, activité physique intense, travail physique) </option>
             
         </select>
-        <button type="submit">Allez c'est partit !</button>
+        <button type="submit" [disabled]="calorieform.invalid">Allez c'est partit !</button>
     </form>
 </div>
 

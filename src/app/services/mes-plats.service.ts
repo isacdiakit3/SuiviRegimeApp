@@ -76,8 +76,6 @@ export class mesPlatsService {
     }
 
     onCalculBRM(user: any): number {
-            console.log(user);
-            console.log(13.397 * user.poids)
 
         if (user.genre === 'Homme') {
             let BRMH = 88.362 + (13.397 * user.poids) + (4.799 * user.taille) - (5.677 * user.age)
