@@ -78,10 +78,10 @@ export class mesPlatsService {
     onCalculBRM(user: any): number {
 
         if (user.genre === 'Homme') {
-            let BRMH = 88.362 + (13.397 * user.poids) + (4.799 * user.taille) - (5.677 * user.age)
+            let BRMH = 66.479 + (13.7516 * user.poids) + (500.33 * user.taille) - (6.7550 * user.age)
             return (BRMH)
         } else {
-            const BRMF = 447.593 + (9.247 * user.poids) + (3.098 * user.taille) - (4.330 * user.age)
+            const BRMF = 655.0955 + (9.740 * user.poids) + (184.96 * user.taille) - (4.6756 * user.age)
             return (BRMF)
         }
     }

@@ -18,7 +18,8 @@ import { CalorieComponent } from './calorie/calorie.component';
 import { PageObjectifComponent } from './page-objectif/page-objectif.component';
 import { FormRepasComponent } from './form-repas/form-repas.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
-import{FormsModule} from '@angular/forms'
+import{FormsModule} from '@angular/forms';
+import { PlanificationListeComponent } from './planification-liste/planification-liste.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import{FormsModule} from '@angular/forms'
     CalorieComponent,
     PageObjectifComponent,
     FormRepasComponent,
-    PopUpComponent
+    PopUpComponent,
+    PlanificationListeComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,9 @@ import { PagePlanificationComponent } from './page-planification/page-planificat
 import { CalorieComponent } from './calorie/calorie.component';
 import { PageObjectifComponent } from './page-objectif/page-objectif.component';
 import { FormRepasComponent } from './form-repas/form-repas.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { PlanificationComponent } from './planification/planification.component';
+import { PlanificationListeComponent } from './planification-liste/planification-liste.component';
 
 const routes: Routes = [
   {
@@ -20,9 +23,6 @@ const routes: Routes = [
     path:"mesPlats/:id",component:MesSinglePlatComponent
   },
   {
-    path:"page-planification",component:PagePlanificationComponent
-  },
-  {
     path:"calorie",component:CalorieComponent
   },
   {
@@ -30,6 +30,12 @@ const routes: Routes = [
   },
   {
     path:"formRepas", component:FormRepasComponent
+  },
+  {
+    path:"editpopup", component:PopUpComponent
+  },
+  {
+    path:"planificationliste", component:PlanificationListeComponent
   }
 ];
 
